@@ -34,9 +34,9 @@ public class BaseDrive {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
         }
+        driver.get(siteurl);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(siteurl);
         PageDriver.getInstance().setWebdriver(driver);
         return driver;
     }
