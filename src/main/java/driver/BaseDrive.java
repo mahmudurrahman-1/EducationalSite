@@ -12,7 +12,7 @@ import java.util.Properties;
 
 public class BaseDrive {
     //set webdriver type driver variable as null
-    public WebDriver driver =null;
+    public WebDriver driver = null;
 
     //Now extract drivers and site url
     //create an object of properties class and initialize
@@ -22,17 +22,17 @@ public class BaseDrive {
     String siteurl = props.getProperty("baseUrl");
 
     //setup the driver
-    public WebDriver setup(){
-        switch (browser){
+    public WebDriver setup() {
+        switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                driver=new ChromeDriver();
+                driver = new ChromeDriver();
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                driver=new FirefoxDriver();
+                driver = new FirefoxDriver();
             default:
                 WebDriverManager.edgedriver().setup();
-                driver=new EdgeDriver();
+                driver = new EdgeDriver();
         }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -41,5 +41,3 @@ public class BaseDrive {
         return driver;
     }
 }
-
-public void 
