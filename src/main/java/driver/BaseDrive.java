@@ -27,9 +27,11 @@ public class BaseDrive {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
+                break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
+                break;
             default:
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();

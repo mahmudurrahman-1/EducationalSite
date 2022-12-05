@@ -8,7 +8,7 @@ public class AppRoute {
     ApplicationRouting approutePage = new ApplicationRouting();
 
     //Apply the testcases
-    @Given("Arman goes to nu site and click apply")
+    @Given("^Arman goes to nu site and click apply$")
     public void gotoApply(){
         approutePage.clickApply();
     }
