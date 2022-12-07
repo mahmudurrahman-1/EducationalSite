@@ -1,4 +1,4 @@
-package hooks;
+package step_def;
 
 import io.cucumber.java.en.Given;
 import pageObject.ApplicationRouting;
@@ -9,7 +9,9 @@ public class AppRoute {
 
     //Apply the testcases
     @Given("^Arman goes to nu site and click apply$")
-    public void gotoApply(){
+    public void gotoApply() throws InterruptedException{
+        approutePage.waitForPageLoad();
+        Thread.sleep(3000);
         approutePage.clickApply();
     }
 }

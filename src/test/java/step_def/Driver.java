@@ -1,4 +1,4 @@
-package hooks;
+package step_def;
 
 import driver.BaseDrive;
 import driver.PageDriver;
@@ -14,6 +14,6 @@ public class Driver extends BaseDrive {
 //when all methods are executed @After notation will call closeDriver to quite browser
     @After
     public void closeDiver() {
-        PageDriver.getCurrentDriver().quit();
+        PageDriver.getCurrentDriver().close();
     }
 }

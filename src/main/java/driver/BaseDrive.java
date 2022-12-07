@@ -16,7 +16,7 @@ public class BaseDrive {
 
     //Now extract drivers and site url
     //create an object of properties class and initialize
-    Properties props = PropertyDataParser.props("browserData");
+    Properties props = PropertyDataParser.props("browserData.properties");
     // extract
     String browser = props.getProperty("b1");
     String siteurl = props.getProperty("baseUrl");
@@ -36,10 +36,10 @@ public class BaseDrive {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
         }
-        driver.get(siteurl);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         PageDriver.getInstance().setWebdriver(driver);
+        driver.get(siteurl);
         return driver;
     }
 }
