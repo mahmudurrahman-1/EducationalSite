@@ -17,12 +17,18 @@ public class ApplicationRouting extends Common {
      ***/
     @FindBy(xpath = "//a[normalize-space()='Apply Now']")
     List<WebElement> applyNowBtn;
+    @FindBy(className = "close")
+    List<WebElement> closePopup;
 
     /***************
      * All the actions
      */
-     public void clickApply(){
+    public void clicktoClosePopUp(){
+        closePopup.get(1).click();
+    }
+    public void clickApply() throws InterruptedException{
          System.out.println(applyNowBtn.size());
          applyNowBtn.get(1).click();
      }
+
 }

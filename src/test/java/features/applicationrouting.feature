@@ -1,3 +1,4 @@
 Feature: Apply feature regression testing
   Scenario: Applying for admission
-    Given Arman goes to nu site and click apply
+    Given Nu site loaded and close popup
+    When Arman goes to nu site and click apply

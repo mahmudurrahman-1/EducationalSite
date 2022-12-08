@@ -2,10 +2,10 @@
 
 ### write automation script to automate the below scenarios
 
-**Scenario:** download a book after with login
+**Scenario:** Applying for admission
 
-> **_Given:_** Arman goes to nu site and click apply   
-> **_And:_**    
+> **_Given:_** Nu site loaded and close popup   
+> **_When:_** Arman goes to nu site and click apply   
 > **_And:_**      
 > **_And:_**   
 > **_And:_**    
