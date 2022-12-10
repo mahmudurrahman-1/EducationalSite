@@ -2,17 +2,14 @@
 
 ### write automation script to automate the below scenarios
 
+
 **Scenario:** Applying for admission
 
 > **_Given:_** Nu site loaded and close popup   
 > **_When:_** Arman goes to nu site and click apply   
-> **_And:_**      
-> **_And:_**   
-> **_And:_**    
-> **_When:_**     
-> **_And:_**    
-> **_And:_**   
-> **_Then:_** 
+> **_And:_**  Arman selects requirements for admission process    
+> **_And:_**  Arman clicks apply when popup appears   
+> **_Then:_** Arman enter "email" for getting login link
 
 ### Additional functionalities, that may be covered:
 
